@@ -63,6 +63,8 @@
 	<script type="text/javascript" src="{$js_uri}"></script>
 	{/foreach}
 {/if}
+<!-- AZALEA GOOGLE FONTS -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		{$HOOK_HEADER}
 	</head>
 

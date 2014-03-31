@@ -7,14 +7,16 @@
 }
 
 .masonry_item {
-  background: #333;
+  background: #ededed;
   margin-bottom: 5px;
-  border: 1px solid black;
+  border: 1px solid #e4e4e4;
   width: 265px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .masonry_item img {
-  margin
+  margin: 9px auto 0 auto;
+  display: block;
 }
 
 /**************
