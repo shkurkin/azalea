@@ -23,8 +23,10 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
+
+<h1 style='position: absolute'>Home product size: {$homeSize|escape:'html'}</h1>
 <!-- MODULE Home Featured Products -->
-<div id="featured-products_block_center" class="block products_block clearfix js-masonry" data-masonry-options='{ "columnWidth": 300, "itemSelector": ".masonry_item" }'>
+<div id="featured-products_block_center" class="block products_block clearfix js-masonry">
 	{if isset($products) AND $products}
 		<div class="block_content">
 			{assign var='liHeight' value=250}
@@ -36,7 +38,7 @@
 				{math equation="(total%perLine)" total=$smarty.foreach.homeFeaturedProducts.total perLine=$nbItemsPerLine assign=totModulo}
 				{if $totModulo == 0}{assign var='totModulo' value=$nbItemsPerLine}{/if}
 				<div class="ajax_block_product masonry_item {if $smarty.foreach.homeFeaturedProducts.first}first_item{elseif $smarty.foreach.homeFeaturedProducts.last}last_item{else}item{/if} {if $smarty.foreach.homeFeaturedProducts.iteration%$nbItemsPerLine == 0}last_item_of_line{elseif $smarty.foreach.homeFeaturedProducts.iteration%$nbItemsPerLine == 1} {/if} {if $smarty.foreach.homeFeaturedProducts.iteration > ($smarty.foreach.homeFeaturedProducts.total - $totModulo)}last_line{/if}">
-					<a href="{$product.link|escape:'html'}" title="{$product.name|escape:html:'UTF-8'}" class="product_image"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image)|escape:'html'}" width="275" alt="{$product.name|escape:html:'UTF-8'}" /></a>
+					<a href="{$product.link|escape:'html'}" title="{$product.name|escape:html:'UTF-8'}" class="product_image"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image)|escape:'html'}" width="225" alt="{$product.name|escape:html:'UTF-8'}" /></a>
 					<p class="s_title_block"><a href="{$product.link|escape:'html'}" title="{$product.name|truncate:50:'...'|escape:'htmlall':'UTF-8'}">{$product.name|truncate:35:'...'|escape:'htmlall':'UTF-8'}</a></p>
 					<div class="product_desc"><a href="{$product.link|escape:'html'}" title="{l s='More' mod='homefeatured'}">{$product.description_short|strip_tags|truncate:65:'...'}</a></div>
 					<div>
@@ -51,6 +53,6 @@
 	{/if}
 </div>
 
-<script type="text/javascript" src="/prestashop/themes/azalea/js/masonry.js"></script>
 <script type="text/javascript" src="/prestashop/themes/azalea/js/azalea.js"></script>
+<script type="text/javascript" src="/prestashop/themes/azalea/js/masonry.js"></script>
 <!-- /MODULE Home Featured Products -->
