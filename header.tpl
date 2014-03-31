@@ -73,24 +73,24 @@
 			<p>{l s='You cannot place a new order from your country.'} <span class="bold">{$geolocation_country}</span></p>
 		</div>
 		{/if}
-		<div id="page" class="container_9 clearfix">
+		<div id="page">
 
 			<!-- Header -->
-			<div id="header" class="grid_9 alpha omega">
+			<div id="header">
 				<a id="header_logo" href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}">
 					<img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if}/>
 				</a>
-				<div id="header_right" class="grid_9 omega">
+				<div id="header_right">
 					{$HOOK_TOP}
 				</div>
 			</div>
 
-			<div id="columns" class="grid_9 alpha omega clearfix">
+			<div id="columns">
 				<!-- Left -->
-				<div id="left_column" class="column grid_2 alpha">
+				<div id="left_column">
 					{$HOOK_LEFT_COLUMN}
 				</div>
 
 				<!-- Center -->
-				<div id="center_column" class=" grid_5">
+				<div id="center_column">
 	{/if}
