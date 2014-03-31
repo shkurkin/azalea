@@ -56,6 +56,8 @@
 	<link href="{$css_uri}" rel="stylesheet" type="text/css" media="{$media}" />
 	{/foreach}
 {/if}
+<!-- AZALEA CSS OVERRIDE -->
+<link rel="stylesheet" type="text/css" href="/prestashop/themes/azalea/css/azalea-override.css">
 {if isset($js_files)}
 	{foreach from=$js_files item=js_uri}
 	<script type="text/javascript" src="{$js_uri}"></script>
@@ -63,7 +65,7 @@
 {/if}
 		{$HOOK_HEADER}
 	</head>
-	
+
 	<body {if isset($page_name)}id="{$page_name|escape:'htmlall':'UTF-8'}"{/if} class="{if isset($page_name)}{$page_name|escape:'htmlall':'UTF-8'}{/if}{if $hide_left_column} hide-left-column{/if}{if $hide_right_column} hide-right-column{/if}{if $content_only} content_only{/if}">
 	{if !$content_only}
 		{if isset($restricted_country_mode) && $restricted_country_mode}
