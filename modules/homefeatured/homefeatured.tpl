@@ -41,10 +41,7 @@
 					<a href="{$product.link|escape:'html'}" title="{$product.name|escape:html:'UTF-8'}" class="product_image"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image)|escape:'html'}" width="235" alt="{$product.name|escape:html:'UTF-8'}" /></a>
 					<p class="product_description"><a href="{$product.link|escape:'html'}" title="{$product.name|truncate:50:'...'|escape:'htmlall':'UTF-8'}">{$product.name|truncate:35:'...'|escape:'htmlall':'UTF-8'}</a></p>
 					<p class="product_description"><a href="{$product.link|escape:'html'}" title="{l s='More' mod='homefeatured'}">{$product.description_short|strip_tags|truncate:65:'...'}</a></p>
-					<div>
-						{if $product.show_price AND !isset($restricted_country_mode) AND !$PS_CATALOG_MODE}<p class="product_description">{if !$priceDisplay}${$product.price|string_format:"%d"}{else}${$product.price_tax_exc|string_format:"%d"}{/if}</p>{else}<div style="height:21px;"></div>{/if}
-
-					</div>
+						{if $product.show_price AND !isset($restricted_country_mode) AND !$PS_CATALOG_MODE}<p class="product_description product_price">{if !$priceDisplay}${$product.price|string_format:"%d"}{else}${$product.price_tax_exc|string_format:"%d"}{/if}</p>{else}<div style="height:21px;"></div>{/if}
 				</div>
 			{/foreach}
 		</div>
