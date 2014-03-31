@@ -57,7 +57,7 @@
 	{/foreach}
 {/if}
 <!-- AZALEA CSS OVERRIDE -->
-<link rel="stylesheet" type="text/css" href="/prestashop/themes/azalea/css/azalea-override.css">
+	<link rel="stylesheet" type="text/css" href="/prestashop/themes/azalea/css/azalea-override.css">
 {if isset($js_files)}
 	{foreach from=$js_files item=js_uri}
 	<script type="text/javascript" src="{$js_uri}"></script>
