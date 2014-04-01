@@ -73,6 +73,11 @@
 
 
 #featuredImage {
+  width: 426px;
+  height: 656px;
+}
 
+#featuredImage img {
+  width: 402px;
 }
 

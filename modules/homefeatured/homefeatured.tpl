@@ -28,7 +28,9 @@
 <div id="featured-products_block_center" class="block products_block clearfix js-masonry">
 	{if isset($products) AND $products}
 		<div class="block_content">
-			<div id="featuredImage" class="masonry_item"></div>
+			<div id="featuredImage" class="masonry_item">
+				<img src="/prestashop/themes/azalea/img/featuredImage.jpg">
+			</div>
 			{assign var='liHeight' value=250}
 			{assign var='nbItemsPerLine' value=4}
 			{assign var='nbLi' value=$products|@count}
